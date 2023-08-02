@@ -15,8 +15,23 @@ namespace CarLotSimulator
         public string EngineNoise { get; set; }
         public string HonkNoise { get; set; }
         public bool IsDriveable { get; set; }
-        
-    
+
+        public void MakeEngineNoise(string engineNoise)
+        {
+            EngineNoise = engineNoise;
+            Console.WriteLine($"{Make} {Model} has engine noise that sounds like {EngineNoise}");
+
+        }
+
+        public void MakehonkNoise(string honkNoise)
+        {
+            HonkNoise = honkNoise;
+            Console.WriteLine($"{Make} {Model} has an engine noise that sounds like {honkNoise}");
+
+        }
+
+
+            
     }
 }
 
