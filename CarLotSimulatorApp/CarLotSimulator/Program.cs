@@ -8,54 +8,64 @@ namespace CarLotSimulator
         {
             //Done
 
-
-
-            //Now that the Car class is created we can instanciate 3 new cars
-            //Set the properties for each of the cars
-            //Call each of the methods for each car
-
-            var bronco = new Car();
-            bronco.Make = "Ford";
-            bronco.Model = "Bronco";
-            bronco.Year = 1977;
-            bronco.IsDriveable = true;
-
-            bronco.MakeEngineNoise("a sea lion");
-            bronco.MakehonkNoise("honk honk");
-            Console.WriteLine();
-
-
-            var bmw = new Car()
+            var carLot = new Carlot();
             {
-                Make = "Bmw",
-                Model = "M3",
-                Year = 2023,
-                IsDriveable = true
+                
 
-            };
+                var bronco = new Car();
+                bronco.Make = "Ford";
+                bronco.Model = "Bronco";
+                bronco.Year = 1977;
+                bronco.IsDriveable = true;
+                bronco.EngineNoise = "a sea lion";
+                bronco.HonkNoise = "honk honk";
 
-            bmw.MakeEngineNoise("vroom vroom");
-            bmw.MakehonkNoise("beep");
-            Console.WriteLine();
+                carLot.ParkingLot.Add(bronco);
 
-            var chevy = new Car()
-            {
-                Make = "Chevy",
-                Model = "Impala",
-                Year = 1967,
-                IsDriveable = true 
 
-            };
 
-            chevy.MakeEngineNoise("boom boom");
-            chevy.MakehonkNoise("beep bop");
-            Console.WriteLine();
+                var bmw = new Car();
+
+                bmw.Make = "Bmw";
+                bmw.Model = "M3";
+                bmw.Year = 2023;
+                bmw.IsDriveable = true;
+                bmw.EngineNoise = "vroom";
+                bmw.HonkNoise = "beep";
+
+
+                carLot.ParkingLot.Add(bmw);
+
+
+
+                var chevy = new Car();
+
+                chevy.Make = "Chevy";
+                chevy.Make = "Chevy";
+                chevy.Model = "Impala";
+                chevy.Year = 1967;
+                chevy.IsDriveable = true;
+                chevy.EngineNoise = "boom";
+                chevy.HonkNoise = "bip";
+
+
+                carLot.ParkingLot.Add(chevy);
+
+                carLot.CheckCars();
+
+
+
+
+
+
+
+            }
         }
 
 
     }
-}
-            //*************BONUS*************//
+}       
+    
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
 
